@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root{
+    --mainfont : 'Raleway', sans-serif;
+    --subfont : 'open sans', sans-serif;
+    --brand : #e84545 ;
+    --banneroverlay: rgba(43, 46, 74, 0.95) ;
+    --head-colr: #2d3033;
+    --pcolr: #6c7279;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+ ul{
+     list-style: none;
+ }
+
+ img{
+     vertical-align: center;
+ }
+
+.container{
+     width: 1170px;
+     margin: 0 auto;
+}
+
+/* =================================
+            common css ends
+================================= */
+.ral-13{
+    font-family: var(--mainfont);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.ral-14{
+    font-family: var(--mainfont);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+
+.ral-bold{
+    font-family: var(--mainfont);
+    font-weight: 700;
+}
+
+.ral-reg{
+    font-family: var(--mainfont);
+    font-weight: 400;
+}
+
+.open-bold{
+    font-family: var(--subfont);
+    font-weight: 700;
+}
+
+.open-reg{
+    font-family: var(--subfont);
+    font-weight: 400;
+}
+
+.text-white{
+    color: #fff;
+}
+
+.text-black{
+    color: #2d3033;
+}
+
+
+.text-upper{
+    text-transform: uppercase;
+}
+
+.text-cap{
+    text-transform: capitalize;
+}
+
+.text-center{
+    text-align: center;
+}
+
+/* =================================
+        typography css ends
+================================= */
+
+nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 100;
+}
+
+nav .navbar{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .navbar .logo{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+nav .navbar .logo img{
+    width: 100%;
+}
+
+nav .navbar .menulist{
+    width: 600px;
+    height: 100px
+}
+
+nav .navbar .menulist ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+}
+
+nav .navbar .menulist ul li a {
+    color: rgba(255, 255, 255, 0.75);
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+}
+
+nav .navbar .menulist ul li a:hover{
+    color: var(--brand);
+}
+/* =================================
+        nav bar css ends
+================================= */
+
+#banner{
+    height: 750px;
+    background-image: url(../images/bannerjpg.jpg);
+    position: relative;
+    z-index: 1;
+}
+
+#banner::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:var(--banneroverlay);
+    z-index: -1;
+}
+
+#banner .banner{
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#banner .banner h1{
+    font-size: 65px;
+    line-height: 71px;
+    padding: 0 45px;
+}
+
+#banner .banner p{
+    font-size: 22px;
+    line-height: 33px;
+    padding: 30px 109px 75px 109px;
+}
+
+#banner .banner a{
+    font-family: var(--mainfont);
+    font-size: 13px;
+    font-weight: 600px;
+    background-color: var(--brand);
+    width: 200px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    transition: all ease .5s;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    -ms-transition: all ease .5s;
+    -o-transition: all ease .5s;
+}
+
+#banner .banner a:hover{
+    background-color: #c03d3d;
+}
+
+/* =================================
+        banner css ends
+================================= */
+
+#features{
+    height: 450px;
+    margin: 120px 0;
+}
+
+#features .features{
+    height: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: space-between;
+}
+
+#features .features .items{
+    width: 370px;
+    height: 190px;
+}
+
+#features .features .items h4{
+    font-size: 14px;
+    color: var(--head-colr);
+    padding: 30px 0 12px 0;
+}
+
+#features .features .items p{
+    font-size: 14px;
+    line-height: 21px;
+    color:var(--pcolr );
+}
+
+/* =================================
+        features css ends
+================================= */
+
+
+#work{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#work .workitems{
+    width: 25%;
+    height: 50%;
+    position: relative;
+}
+
+#work .workitems img{
+    width: 100%;
+    height: 100%;
+}
+
+#work .workitems .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: var(--brand);
+    opacity: 0.0;
+    line-height: 27px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+}
+
+#work .workitems:hover .overlay{
+    opacity: 0.9;
+}
+
+/* =================================
+        work css ends
+================================= */
+#team {
+    height: 780px;
+}
+
+#team .team{
+    height: 580px;
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+}
+
+#team .team .members{
+    width: 270px;
+    height: 580px;
+    margin: 100px 0;
+}
+
+#team .team .members h3{
+    font-size: 22px;
+    padding: 25px 0 10px 0;
+}
+
+#team .team .members h4{
+    font-size: 14px;
+    color: var(--brand);
+}
+
+#team .team .members p{
+    font-family: var(--subfont);
+    color: var(--pcolr);
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--pcolr);
+    padding: 21px 0;
+}
+
+#team .team .members a i{
+    color: #c6cacc;
+    font-size: 18px;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e8ecee;
+    box-sizing: border-box;
+    padding: 0 12px;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+}
+
+#team .team .members a i:hover{
+    color: var(--brand);
+    border-color: var(--brand);
+}
+/* =================================
+        team css ends
+================================= */
+
+#testimonial{
+    height: 500px;
+    background-color: #53354a;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#testimonial .img{
+    width: 50%;
+    height: inherit;
+}
+
+#testimonial .comments{
+    width: 585px;
+    height: inherit;
+    padding-left: 85px;
+}
+
+#testimonial .comments h3{
+    font-family: 'cardo', serif;
+    font-style: italic;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 400;
+    padding: 115px 0 40px 0;
+}
+
+#testimonial .comments p{
+    font-size: 13px;
+}
+
+#testimonial .comments .nav-dots{
+    display: flex;
+    justify-content: center;
+    padding-top: 65px;
+}
+
+#testimonial .comments .nav-dots i{
+    color: #fff;
+    opacity: .2;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    margin: 0 4px;
+}
+#testimonial .comments .nav-dots i:hover{
+    opacity: 1;
+}
+
+/* =================================
+        testimonial css ends
+================================= */
+
+#download{
+    height: 340px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+#download h3{
+    font-family: var(--mainfont);
+    color: var(--head-colr);
+    font-size: 28px;
+    font-weight: 300;
+    padding: 0px 0 15px 0;
+}
+
+#download p{
+    color: var(--head-colr);
+    font-size: 13px;
+    padding-bottom: 35px;
+}
+
+#download a{
+    width: 280px;
+    height: 46px;
+    background-color: var(--brand) ;
+    font-family: var(--mainfont);
+    line-height: 46px;
+    font-weight: 500;
+    font-size: 13px;
+    align-self: center;
+    transition: all ease .5s;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    -ms-transition: all ease .5s;
+    -o-transition: all ease .5s;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+#download a:hover{
+    background-color: #c03d3d;
+}
+/* =================================
+        downlaod css ends
+================================= */
+
+#footer{
+    height: 250px;
+    background-color: #3a3e64;
+}
+
+#footer .footer{
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer .footer .items{
+    width: 370px;
+    height: 250px;
+    text-align: center;
+}
+
+#footer .footer .items h3{
+    padding: 70px 0 22px 0;
+}
+
+#footer .footer .items p{
+    font-family: var(--mainfont);
+    font-size: 13px;
+    font-weight: 400;
+    opacity: .5;
+    padding: 0 100px;
+    line-height: 22px;
+}
+
+#footer .footer .items p:last-child{
+    padding: 0;
+}
+
+#footer .footer .items a i{
+    display: inline-block;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    padding: 0 12px;
+    margin: 0 4px;
+}
+/* =================================
+        footer css ends
+================================= */
+#copyright {
+    background-color: #313454;
+    height: 95px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#copyright .copyright {
+    width: 330px;
+    margin: 0 auto;
+}
+
+#copyright .copyright p{
+    font-family: var(--mainfont);
+    font-size: 14px;
+    font-weight: 400;
+    color: #808080;
+}
+
+#copyright .copyright p span{
+    color: #fff;
+}
+
+#copyright .copyright i:nth-child(2){
+    color: var(--brand);
+}
+
+
+
+
+
+
+/* =================================
+        copyright css ends
+================================= */
+
